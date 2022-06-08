@@ -1,0 +1,183 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+#root{
+    width: 100%;
+    height: 100vh;
+    background-color: black;
+}
+
+header{
+    width: 100%;
+    height: 80px;
+    border-bottom: 2px solid red;
+    display: flex;
+    flex-direction: row;
+    position: relative;
+
+}
+header > .logo{
+    width: 20%;
+    height: 80px;
+    border-right: 1px solid red;
+}
+header > .logo img{
+    width: 98%;
+    height: 98%;
+}
+.nav{
+    width: 80%;
+    height: 80px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 0.9em;
+
+}
+.userAvatar {
+    width: 50px;
+    height: 50px;
+    margin: 15px;
+}
+.userAvatar img{width: 100%;height: 100%;}
+.userName{
+    width: 200px;
+    height: 80px;
+    position: absolute;
+    top: 0;
+    margin-left: 80px;
+}
+.userName h3{
+    margin-top: 50px;
+    letter-spacing: 1px;
+    font-size: 1.1em;
+    color: white;
+}
+#input{
+    width: 400px;
+    height: 80px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    
+}
+.nav h2{
+    color: white;
+    text-align: right;
+    padding: 0 10px;
+}
+.nav input{
+    width: 90%;
+    height: 40px;
+    margin-top: 10px;
+    margin-left: 8%;
+    text-align: center;
+    outline: none;
+}
+
+
+main{
+    width: 100%;
+    height: calc(100vh - 87px);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    overflow-y: auto;
+    background-color:black;
+    margin-top: 5px;
+}
+.card{
+    width: 300px;
+    height: 360px;
+    margin: 20px;
+    position: relative;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: rgb(33, 33, 37);
+    
+}
+.card h1{
+    color: white;
+    font-size: 1.1em;
+    text-align: center;
+    padding: 10px;
+    width: 90%;
+    margin-left: 5%;
+    margin-top: 4px;
+    height: 55px;
+    background-color: white;
+    color: #3d3d3d;
+    
+}
+
+.poster{
+    width: 230px;
+    height: 280px;
+    margin-left: 35px;
+    border-radius: 5px;
+     margin-top: 10px;
+    
+}
+.poster img{
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+}
+.hover{
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    opacity: 0;
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    color: white;
+    text-align: center;
+    overflow-y: auto;
+}
+.hover img{
+    width: 30px;
+    height: 20px;
+}
+.hover:hover{
+    opacity: 1;
+   
+    transition: 1s;
+   
+}
+.voto{
+    margin-top: 10px;
+    width: 90%;
+    height: 30px;
+    margin-left: 5%;
+}
+.descrizione{
+    width: 90%;
+    margin-left: 5%;
+    height: auto;
+    padding: 5px;
+    color: white;
+}
+.descrizione p{
+    font-size: 0.8em;
+}
+
+@media screen and ( max-width: 670px) {
+    .userAvatar, .userName{
+        display: none;
+    }
+}
+@media screen and ( max-width: 480px) {
+    #input{
+        width: 60%;
+        font-size: 0.7em;
+    }
+    #input input{
+        width: 90%;
+        transition: 500ms;
+        right: -10% !important;
+    }
+   
+}
